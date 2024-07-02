@@ -1,3 +1,6 @@
+// eslint-disable-next-line no-undef
+// const MermaidTool = require("editorjs-mermaid");
+import MermaidTool from "editorjs-mermaid";
 import { createContext, useRef } from "react";
 import EditorJS from "@editorjs/editorjs";
 import Paragraph from "@editorjs/paragraph";
@@ -14,6 +17,7 @@ import Marker from "@editorjs/marker";
 import InlineCode from "@editorjs/inline-code";
 import ColorPlugin from "editorjs-text-color-plugin";
 import AlignmentBlockTune from "editorjs-text-alignment-blocktune";
+import editorjsCodeflask from "@calumk/editorjs-codeflask";
 
 export const EditorContext = createContext();
 
@@ -101,7 +105,7 @@ function EditorContextProvider(props) {
             type: "text",
           },
         },
-
+        code: editorjsCodeflask,
         Marker: {
           class: Marker,
         },
@@ -111,11 +115,15 @@ function EditorContextProvider(props) {
         changeCase: {
           class: ChangeCase,
         },
+        mermaid: MermaidTool,
       },
       onChange: async () => {
         const data = await editor.save();
         console.log(data);
       },
+      // onReady: async () => {
+      //   editor.blocks.renderFromHTML("<p>hi</p><div><h1>hey there</h1></div>");
+      // },
     });
 
     editorInstanceRef.current = editor;

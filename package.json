@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@calumk/editorjs-codeflask": "^1.0.10",
     "@editorjs/checklist": "^1.6.0",
     "@editorjs/editorjs": "^2.29.1",
     "@editorjs/embed": "^2.7.4",
@@ -24,6 +25,7 @@
     "@sotaproject/strikethrough": "^1.0.1",
     "editorjs-alert": "^1.1.4",
     "editorjs-change-case": "^0.0.3",
+    "editorjs-mermaid": "^1.0.0",
     "editorjs-table": "^1.4.10",
     "editorjs-text-alignment-blocktune": "^1.0.3",
     "editorjs-text-color-plugin": "^2.0.4",
