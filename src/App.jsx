@@ -1,6 +1,7 @@
+import BlockNote from "./components/BlockNote";
 import EditorPlace from "./components/EditorPlace";
 function App() {
-  return <EditorPlace />;
+  return <BlockNote />;
 }
 
 export default App;
